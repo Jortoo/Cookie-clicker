@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://cnriarim0m6rh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yaehf"]
+content_margin_top = 10.0
+bg_color = Color(0.3980233, 0.2277239, 0.01790979, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.2928208, 0.16283503, 0.010622962, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[node name="StatsMenu" type="PanelContainer" unique_id=144028623]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -200.0
+offset_right = 250.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_yaehf")
+
+[node name="Title" type="Label" parent="." unique_id=217549725]
+layout_mode = 2
+size_flags_vertical = 0
+text = "Your Stats"
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=976567364]
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="StatisticsContainer" type="VBoxContainer" parent="MarginContainer" unique_id=2091901753]
+layout_mode = 2
+size_flags_vertical = 0
+alignment = 1
+
+[node name="Cookies" type="Label" parent="MarginContainer/StatisticsContainer" unique_id=1324387923]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+text = "Cookies: 0"
+
+[node name="TotalCookies" type="Label" parent="MarginContainer/StatisticsContainer" unique_id=1216259296]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+text = "Lifetime Cookies: 0"
+
+[node name="Clicks" type="Label" parent="MarginContainer/StatisticsContainer" unique_id=502038815]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+text = "Clicks: 0"
+
+[node name="CpsMulti" type="Label" parent="MarginContainer/StatisticsContainer" unique_id=305252880]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+text = "Cps Multi: 0x"
+
+[node name="CpcMulti" type="Label" parent="MarginContainer/StatisticsContainer" unique_id=2003368078]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+text = "Cpc Multi: 0x"
+
+[node name="CritChance" type="Label" parent="MarginContainer/StatisticsContainer" unique_id=1164359367]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+text = "Crit Chance: 0%"
+
+[node name="CritMulti" type="Label" parent="MarginContainer/StatisticsContainer" unique_id=495833808]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+text = "Crit Multi: 1x"
+
+[node name="CloseButton" type="Button" parent="MarginContainer" unique_id=348833888]
+layout_mode = 2
+size_flags_vertical = 8
+text = "Close"

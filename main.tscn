@@ -1,0 +1,755 @@
+[gd_scene format=3 uid="uid://cqow47bch5ocs"]
+
+[ext_resource type="Texture2D" uid="uid://bdihlxulvx85f" path="res://background.png" id="1_272bh"]
+[ext_resource type="Script" uid="uid://dt7avv58dnhnw" path="res://cookie.gd" id="2_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://cij0o8fm1d7i2" path="res://koekje (2).png" id="2_272bh"]
+[ext_resource type="Script" uid="uid://d22fkupy8j3e7" path="res://timer.gd" id="3_h2yge"]
+[ext_resource type="Script" uid="uid://dhkqaykdn1nv2" path="res://Upgrades.gd" id="4_1bvp3"]
+[ext_resource type="Script" uid="uid://c16h5fentuo0" path="res://ShopButton.gd" id="5_lquwl"]
+[ext_resource type="Script" uid="uid://bc2ecffxntugd" path="res://autoclicker.gd" id="6_5vw27"]
+[ext_resource type="Script" uid="uid://qvth0hwut7tj" path="res://stats_button.gd" id="6_7mycd"]
+[ext_resource type="Script" uid="uid://bnhonwp5h68e6" path="res://prestige_button.gd" id="7_kek77"]
+[ext_resource type="Script" uid="uid://cnooeksw0m1pv" path="res://Achievement_menu.gd" id="8_4c57u"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yaehf"]
+content_margin_top = 10.0
+bg_color = Color(0.3980233, 0.2277239, 0.01790979, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.2928208, 0.16283503, 0.010622962, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dg77c"]
+content_margin_left = 10.0
+content_margin_top = 5.0
+content_margin_right = 10.0
+content_margin_bottom = 5.0
+bg_color = Color(0.4845959, 0.2866543, 0.08718384, 1)
+border_width_right = 7
+border_width_bottom = 7
+border_color = Color(0.38496485, 0.2222102, 0.05923272, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ycdy4"]
+content_margin_left = 10.0
+content_margin_top = 5.0
+content_margin_right = 10.0
+content_margin_bottom = 5.0
+bg_color = Color(0.4862745, 0.28627452, 0.08627451, 1)
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.38431373, 0.22352941, 0.05882353, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w48qg"]
+content_margin_left = 10.0
+content_margin_top = 5.0
+content_margin_right = 10.0
+content_margin_bottom = 5.0
+bg_color = Color(0.4862745, 0.28627452, 0.08627451, 1)
+border_width_right = 7
+border_width_bottom = 7
+border_color = Color(0.38431373, 0.22352941, 0.05882353, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cegan"]
+bg_color = Color(0.39607844, 0.22745098, 0.019607844, 1)
+border_width_left = 15
+border_width_top = 15
+border_width_right = 15
+border_width_bottom = 15
+border_color = Color(0.29411766, 0.16470589, 0.011764706, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_272bh"]
+bg_color = Color(0.2901961, 0.20784314, 0.14509805, 1)
+border_color = Color(0.19213578, 0.1622712, 0.14899638, 1)
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5vw27"]
+bg_color = Color(0.11764706, 0.07058824, 0.047058824, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kek77"]
+bg_color = Color(0.36078432, 0.26666668, 0.19607843, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4c57u"]
+bg_color = Color(1, 0.72156864, 0.3019608, 1)
+border_width_left = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0.94057524, 0.6324992, 7.70092e-07, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_efxa6"]
+content_margin_left = 10.0
+bg_color = Color(1, 0.8784314, 0.6, 1)
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.99999946, 0.84065056, 0.4633971, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vivmo"]
+bg_color = Color(1, 0.8784314, 0.6, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.2901961, 0.20784314, 0.14509805, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2cqfq"]
+bg_color = Color(0.36078432, 0.26666668, 0.19607843, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_bottom = 3
+border_color = Color(0.2901961, 0.20784314, 0.14509805, 1)
+corner_radius_top_left = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_074og"]
+bg_color = Color(0.39607844, 0.22745098, 0.019607844, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.29411766, 0.16470589, 0.011764706, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7mycd"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.17254902, 0.105882354, 0.07058824, 1)
+
+[node name="main" type="Node2D" unique_id=1214889592]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1516714781]
+offset_right = 1152.0
+offset_bottom = 655.0
+texture = ExtResource("1_272bh")
+
+[node name="Control" type="Control" parent="." unique_id=1490152933]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 655.0
+size_flags_horizontal = 4
+
+[node name="CounterMargin" type="MarginContainer" parent="Control" unique_id=1567037316]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -131.0
+offset_right = 131.0
+offset_bottom = 102.0
+grow_horizontal = 2
+theme_override_constants/margin_top = 75
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/CounterMargin" unique_id=1809694607]
+layout_mode = 2
+
+[node name="CookieCount" type="Label" parent="Control/CounterMargin/VBoxContainer" unique_id=1201138844]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/font_size = 35
+text = "Cookies: 🍪0
+"
+horizontal_alignment = 1
+
+[node name="CookiePS" type="Label" parent="Control/CounterMargin/VBoxContainer" unique_id=1947658228]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/font_size = 35
+text = "Cookies p/s: 1
+"
+horizontal_alignment = 1
+
+[node name="Cookie" type="TextureButton" parent="Control" unique_id=101824437 node_paths=PackedStringArray("label", "bar", "bar_title")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1300.0
+offset_top = -1300.0
+offset_right = 1300.0
+offset_bottom = 1300.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.1, 0.1)
+size_flags_horizontal = 4
+size_flags_vertical = 8
+texture_normal = ExtResource("2_272bh")
+script = ExtResource("2_0xm2m")
+label = NodePath("../CounterMargin/VBoxContainer/CookieCount")
+bar = NodePath("../../LevelBar/ProgressBar")
+bar_title = NodePath("../../LevelBar/Level")
+
+[node name="StatsMenu" type="PanelContainer" parent="Control" unique_id=1139421231]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -200.0
+offset_right = 250.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_yaehf")
+
+[node name="Title" type="Label" parent="Control/StatsMenu" unique_id=1346121244]
+layout_mode = 2
+size_flags_vertical = 0
+text = "Your Stats"
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/StatsMenu" unique_id=1366422229]
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="StatisticsContainer" type="VBoxContainer" parent="Control/StatsMenu/MarginContainer" unique_id=1246355982]
+layout_mode = 2
+size_flags_vertical = 0
+alignment = 1
+
+[node name="Cookies" type="Label" parent="Control/StatsMenu/MarginContainer/StatisticsContainer" unique_id=1203044576]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+text = "Cookies: 0"
+
+[node name="TotalCookies" type="Label" parent="Control/StatsMenu/MarginContainer/StatisticsContainer" unique_id=283101582]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+text = "Lifetime Cookies: 0"
+
+[node name="Clicks" type="Label" parent="Control/StatsMenu/MarginContainer/StatisticsContainer" unique_id=328442658]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+text = "Clicks: 0"
+
+[node name="CpsMulti" type="Label" parent="Control/StatsMenu/MarginContainer/StatisticsContainer" unique_id=1431982401]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+text = "Cps Multi: 0x"
+
+[node name="CpcMulti" type="Label" parent="Control/StatsMenu/MarginContainer/StatisticsContainer" unique_id=726268626]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+text = "Cpc Multi: 0x"
+
+[node name="CritChance" type="Label" parent="Control/StatsMenu/MarginContainer/StatisticsContainer" unique_id=1887858439]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+text = "Crit Chance: 0%"
+
+[node name="CritMulti" type="Label" parent="Control/StatsMenu/MarginContainer/StatisticsContainer" unique_id=964436311]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+text = "Crit Multi: 1x"
+
+[node name="Prestige" type="Label" parent="Control/StatsMenu/MarginContainer/StatisticsContainer" unique_id=375633733]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+text = "Prestige: 0"
+
+[node name="CloseButton" type="Button" parent="Control/StatsMenu/MarginContainer" unique_id=484791043]
+layout_mode = 2
+size_flags_vertical = 8
+text = "Close"
+
+[node name="ButtonContainer" type="HBoxContainer" parent="Control" unique_id=2030515470]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -72.0
+offset_right = 72.0
+offset_bottom = 40.0
+grow_horizontal = 2
+theme_override_constants/separation = 20
+
+[node name="ShopButton" type="Button" parent="Control/ButtonContainer" unique_id=453202346 node_paths=PackedStringArray("menu")]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/outline_size = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_dg77c")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ycdy4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_w48qg")
+text = "Shop"
+script = ExtResource("5_lquwl")
+menu = NodePath("../../../UpgradeMenu")
+
+[node name="StatsButton" type="Button" parent="Control/ButtonContainer" unique_id=1696754985 node_paths=PackedStringArray("close_button", "stats_menu", "total_clicks", "total_cookies", "current_cookies", "cps_multi", "cpc_multi", "crit_chance", "crit_multi", "prestige")]
+layout_mode = 2
+theme_override_constants/outline_size = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_dg77c")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ycdy4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_w48qg")
+text = "Stats
+"
+script = ExtResource("6_7mycd")
+close_button = NodePath("../../StatsMenu/MarginContainer/CloseButton")
+stats_menu = NodePath("../../StatsMenu")
+total_clicks = NodePath("../../StatsMenu/MarginContainer/StatisticsContainer/Clicks")
+total_cookies = NodePath("../../StatsMenu/MarginContainer/StatisticsContainer/TotalCookies")
+current_cookies = NodePath("../../StatsMenu/MarginContainer/StatisticsContainer/Cookies")
+cps_multi = NodePath("../../StatsMenu/MarginContainer/StatisticsContainer/CpsMulti")
+cpc_multi = NodePath("../../StatsMenu/MarginContainer/StatisticsContainer/CpcMulti")
+crit_chance = NodePath("../../StatsMenu/MarginContainer/StatisticsContainer/CritChance")
+crit_multi = NodePath("../../StatsMenu/MarginContainer/StatisticsContainer/CritMulti")
+prestige = NodePath("../../StatsMenu/MarginContainer/StatisticsContainer/Prestige")
+
+[node name="Autoclicker" type="Button" parent="Control/ButtonContainer" unique_id=951780711 node_paths=PackedStringArray("cookie_node")]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/outline_size = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_dg77c")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ycdy4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_w48qg")
+text = "Auto Clicker"
+script = ExtResource("6_5vw27")
+cookie_node = NodePath("../../Cookie")
+
+[node name="PrestigeButton" type="Button" parent="Control/ButtonContainer" unique_id=2123055663 node_paths=PackedStringArray("menu", "prestige_button", "close_button", "buff_text", "req_text")]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/outline_size = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_dg77c")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ycdy4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_w48qg")
+text = "Prestige"
+script = ExtResource("7_kek77")
+menu = NodePath("../../../PrestigeMenu")
+prestige_button = NodePath("../../../PrestigeMenu/MarginContainer/ButtonContainer/PrestigeButton")
+close_button = NodePath("../../../PrestigeMenu/MarginContainer/ButtonContainer/CloseButton")
+buff_text = NodePath("../../../PrestigeMenu/MarginContainer/BuffText")
+req_text = NodePath("../../../PrestigeMenu/MarginContainer/ReqText")
+
+[node name="AchievementButton" type="Button" parent="Control/ButtonContainer" unique_id=1548164980 node_paths=PackedStringArray("close_button", "grid_container", "template_item", "menu", "title", "notification_panel", "notification_name_label", "notification_desc")]
+layout_mode = 2
+theme_override_constants/outline_size = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_dg77c")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ycdy4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_w48qg")
+text = "Achievements
+"
+script = ExtResource("8_4c57u")
+close_button = NodePath("../../AchievementsMenu/CloseButton")
+grid_container = NodePath("../../AchievementsMenu/MarginContainer/ScrollContainer/VBoxContainer")
+template_item = NodePath("../../AchievementsMenu/MarginContainer/ScrollContainer/VBoxContainer/AchievementsItem")
+menu = NodePath("../../AchievementsMenu")
+title = NodePath("../../AchievementsMenu/Achievements")
+notification_panel = NodePath("../../AchievementNoti")
+notification_name_label = NodePath("../../AchievementNoti/MarginContainer/Title")
+notification_desc = NodePath("../../AchievementNoti/MarginContainer/Desc")
+
+[node name="AchievementsMenu" type="PanelContainer" parent="Control" unique_id=573199544]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -29.0
+offset_right = 25.0
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_cegan")
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/AchievementsMenu" unique_id=155111868]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 25
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Control/AchievementsMenu/MarginContainer" unique_id=1737412317]
+custom_minimum_size = Vector2(500, 400)
+layout_mode = 2
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="VBoxContainer" type="GridContainer" parent="Control/AchievementsMenu/MarginContainer/ScrollContainer" unique_id=2147293032]
+custom_minimum_size = Vector2(600, 400)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_constants/h_separation = 4
+theme_override_constants/v_separation = 25
+columns = 3
+
+[node name="AchievementsItem" type="VBoxContainer" parent="Control/AchievementsMenu/MarginContainer/ScrollContainer/VBoxContainer" unique_id=1384858384]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+alignment = 1
+
+[node name="Button" type="Button" parent="Control/AchievementsMenu/MarginContainer/ScrollContainer/VBoxContainer/AchievementsItem" unique_id=1623810684]
+custom_minimum_size = Vector2(150, 125)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_272bh")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5vw27")
+theme_override_styles/hover = SubResource("StyleBoxFlat_kek77")
+
+[node name="Req" type="Label" parent="Control/AchievementsMenu/MarginContainer/ScrollContainer/VBoxContainer/AchievementsItem/Button" unique_id=1807124334]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -23.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/outline_size = 6
+theme_override_styles/normal = SubResource("StyleBoxFlat_4c57u")
+
+[node name="Desc" type="Label" parent="Control/AchievementsMenu/MarginContainer/ScrollContainer/VBoxContainer/AchievementsItem/Button" unique_id=113000020]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.423
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -14.950001
+offset_right = 20.0
+offset_bottom = -3.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Name" type="Label" parent="Control/AchievementsMenu/MarginContainer/ScrollContainer/VBoxContainer/AchievementsItem/Button" unique_id=949609582]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -8.0
+offset_right = 8.0
+offset_bottom = 28.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_styles/normal = SubResource("StyleBoxFlat_efxa6")
+
+[node name="ProgressBar" type="ProgressBar" parent="Control/AchievementsMenu/MarginContainer/ScrollContainer/VBoxContainer/AchievementsItem/Button" unique_id=393687949]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -1.0
+offset_top = 11.5
+offset_right = -1.0
+offset_bottom = 27.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_styles/background = SubResource("StyleBoxFlat_vivmo")
+theme_override_styles/fill = SubResource("StyleBoxFlat_2cqfq")
+show_percentage = false
+
+[node name="CloseButton" type="Button" parent="Control/AchievementsMenu" unique_id=789086392]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+text = "Close"
+
+[node name="Achievements" type="Label" parent="Control/AchievementsMenu" unique_id=1158318824]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+text = "Achievements: (0/0)"
+
+[node name="AchievementNoti" type="PanelContainer" parent="Control" unique_id=1358741507]
+visible = false
+custom_minimum_size = Vector2(150, 80)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/AchievementNoti" unique_id=1379772708]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Title" type="Label" parent="Control/AchievementNoti/MarginContainer" unique_id=1202658268]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+text = "Completed"
+
+[node name="Desc" type="Label" parent="Control/AchievementNoti/MarginContainer" unique_id=1946207082]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+text = "Placeholder"
+
+[node name="Timer" type="Timer" parent="." unique_id=153444016 node_paths=PackedStringArray("cookieLabel")]
+script = ExtResource("3_h2yge")
+cookieLabel = NodePath("../Control/CounterMargin/VBoxContainer/CookieCount")
+
+[node name="LevelBar" type="Control" parent="." unique_id=1445986950]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 596.0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Level" type="Label" parent="LevelBar" unique_id=1197666464]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -72.0
+offset_top = -70.0
+offset_right = 87.0
+offset_bottom = -47.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/outline_size = 8
+text = "Level: 1 (+1 per click)"
+
+[node name="ProgressBar" type="ProgressBar" parent="LevelBar" unique_id=1031993528]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -385.5
+offset_top = -27.0
+offset_right = 385.5
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_styles/background = SubResource("StyleBoxFlat_vivmo")
+theme_override_styles/fill = SubResource("StyleBoxFlat_2cqfq")
+
+[node name="PrestigeMenu" type="PanelContainer" parent="." unique_id=264103866]
+visible = false
+custom_minimum_size = Vector2(600, 400)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 540.5
+offset_top = 312.0
+offset_right = 611.5
+offset_bottom = 343.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_074og")
+
+[node name="Title" type="Label" parent="PrestigeMenu" unique_id=202583617]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+text = "Prestige"
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="PrestigeMenu" unique_id=1850063471]
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 12
+
+[node name="ButtonContainer" type="VBoxContainer" parent="PrestigeMenu/MarginContainer" unique_id=332667025]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+
+[node name="CloseButton" type="Button" parent="PrestigeMenu/MarginContainer/ButtonContainer" unique_id=1436150910]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Close
+"
+
+[node name="PrestigeButton" type="Button" parent="PrestigeMenu/MarginContainer/ButtonContainer" unique_id=2080838218]
+layout_mode = 2
+size_flags_vertical = 4
+text = "Prestige
+
+"
+
+[node name="BuffText" type="Label" parent="PrestigeMenu/MarginContainer" unique_id=203175864]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "Prestiging gives buffs like 
+o +0.5x Click multi
+o +0.5x CPS multi"
+
+[node name="ReqText" type="Label" parent="PrestigeMenu/MarginContainer" unique_id=398857988]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Prestige Requirement:"
+
+[node name="UpgradeMenu" type="ScrollContainer" parent="." unique_id=1281540260]
+visible = false
+offset_right = 210.0
+offset_bottom = 647.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_7mycd")
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="UpgradeList" type="VBoxContainer" parent="UpgradeMenu" unique_id=805685775 node_paths=PackedStringArray("cps_counter", "cookies_counter")]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 10
+script = ExtResource("4_1bvp3")
+cps_counter = NodePath("../../Control/CounterMargin/VBoxContainer/CookiePS")
+cookies_counter = NodePath("../../Control/CounterMargin/VBoxContainer/CookieCount")
+
+[node name="UpgradeItem" type="Control" parent="UpgradeMenu/UpgradeList" unique_id=256496389]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+
+[node name="UpgradeButton" type="Button" parent="UpgradeMenu/UpgradeList/UpgradeItem" unique_id=57283106]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_272bh")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5vw27")
+theme_override_styles/hover = SubResource("StyleBoxFlat_kek77")
+
+[node name="CostLabel" type="Label" parent="UpgradeMenu/UpgradeList/UpgradeItem/UpgradeButton" unique_id=433333311]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -23.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/outline_size = 6
+theme_override_styles/normal = SubResource("StyleBoxFlat_4c57u")
+
+[node name="DescLabel" type="Label" parent="UpgradeMenu/UpgradeList/UpgradeItem/UpgradeButton" unique_id=1009910090]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TitleLabel" type="Label" parent="UpgradeMenu/UpgradeList/UpgradeItem/UpgradeButton" unique_id=1216177214]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_styles/normal = SubResource("StyleBoxFlat_efxa6")
