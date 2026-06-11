@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bavvgq173v1hk"
-path="res://.godot/imported/Sem.jpg-0e639b7c6db2e1d70724e88b61227874.ctex"
+uid="uid://cij0o8fm1d7i2"
+path="res://.godot/imported/koekje (2).png-dc8e2ed49e45afdf97aba83bbf4c04c2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sem.jpg"
-dest_files=["res://.godot/imported/Sem.jpg-0e639b7c6db2e1d70724e88b61227874.ctex"]
+source_file="res://Assets/koekje (2).png"
+dest_files=["res://.godot/imported/koekje (2).png-dc8e2ed49e45afdf97aba83bbf4c04c2.ctex"]
 
 [params]
 
